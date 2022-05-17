@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/fonts/fonts.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/style.css">
@@ -12,7 +13,10 @@
 </head>
 
 <body>
-    <div class="wrapper-top">
+    <a class="scroll-button" href="#contacts">
+        K
+    </a>
+    <div class="wrapper">
         <header class="header">
             <div class="container">
                 <div class="header__inner">
@@ -22,17 +26,17 @@
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a href="#" class="menu__link">
+                                <a href="#lab" class="menu__link">
                                     О нас
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">
+                                <a href="#advertisement" class="menu__link menu__link--center">
                                     Услуги
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">
+                                <a href="#contacts" class="menu__link">
                                     контакты
                                 </a>
                             </li>
@@ -41,7 +45,7 @@
                 </div>
             </div>
         </header>
-        <section class="lab">
+        <section class="lab" id="lab">
             <div class="container">
                 <div class="lab__inner">
                     <h2 class="lab__title title">
@@ -71,7 +75,7 @@
             </div>
         </section>
     </div>
-    <section class="advertisement">
+    <section class="advertisement" id="advertisement">
         <div class="container advertisement__container">
             <div class="advertisement__text">
                 <a class="advertisement__word advertisement__word--bold">брендинг. ребрендинг.</a> <a class="advertisement__word">influecer marketing.</a> <a class=" advertisement__word advertisement__word--bold">транзитная реклама.</a><a class="advertisement__word">наружная реклама.</a><a class="advertisement__word advertisement__word--bold">внутренняя реклама.</a>
@@ -89,7 +93,7 @@
                         <img class="flasks__flask-img" src="./assets/light.png" alt="">
                         <a class="flasks__flask-name">light</a>
                     </div>
-                    <div class="flasks__flask center">
+                    <div class="flasks__flask">
                         <img class="flasks__flask-img" src="./assets/business.png" alt="">
                         <a class="flasks__flask-name">buisiness</a>
                     </div>
@@ -101,7 +105,7 @@
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <form action="#" class="contacts-form">
                 <input type="text" class="contacts-form__name" id="name" placeholder="Имя" required>
@@ -120,5 +124,5 @@
     </div>
 </footer>
 </body>
-
+<script src="./scripts/script.js"></script>
 </html>

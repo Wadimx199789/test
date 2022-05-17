@@ -6,15 +6,39 @@
           box-sizing: border-box;
 }
 
+.scroll-button {
+  cursor: pointer;
+  z-index: 30;
+  position: fixed;
+  top: 1278px;
+  left: 0;
+  border-radius: 10px;
+  width: 380px;
+  height: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 72px;
+  color: var(--base-color);
+  font-family: 'DOCKER TWO';
+  background: var(--color-light-blue);
+}
+
 .container {
   max-width: 2230px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .title {
+  font-family: 'DOCKER ONE';
+  line-height: 115px;
   font-size: 96px;
-  font-weight: 600;
 }
 
 .header {
@@ -34,15 +58,20 @@ body {
   font-family: var(--base-font);
   font-size: var(--text-size);
   color: var(--text-color);
-  background: var(--background-color);
+  background: var(--base-color);
+}
+
+.menu {
+  padding-top: 15px;
 }
 
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .menu__link {
@@ -54,14 +83,15 @@ body {
   text-transform: uppercase;
 }
 
-.wrapper-top {
-  background: url("../assets/hand (1).png");
-  background-repeat: no-repeat;
-  background-position: 100% 20%;
+.menu__link--center {
+  margin-left: 16px;
+  margin-right: 20px;
 }
 
-.logo {
-  max-width: 670px;
+.wrapper {
+  background: url("../assets/hand (1).png");
+  background-repeat: no-repeat;
+  background-position: 100% 15%;
 }
 
 .logo img {
@@ -70,20 +100,22 @@ body {
 }
 
 .lab {
-  padding-top: 200px;
+  padding-top: 180px;
+  padding-bottom: 150px;
 }
 
 .lab__title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   max-width: 650px;
 }
 
-.lab__inner {
-  padding-bottom: 340px;
+.lab__text {
+  line-height: 66px;
+  max-width: 1100px;
 }
 
-.lab__text {
-  max-width: 1100px;
+.services {
+  padding-top: 76px;
 }
 
 .services__inner {
@@ -96,8 +128,7 @@ body {
 }
 
 .services__content {
-  padding-top: 240px;
-  max-width: 820px;
+  max-width: 860px;
 }
 
 .services__image {
@@ -111,10 +142,16 @@ body {
 }
 
 .services__title {
-  margin-bottom: 100px;
+  margin-bottom: 72px;
+}
+
+.services__text {
+  line-height: 76px;
 }
 
 .advertisement {
+  position: relative;
+  z-index: 100;
   text-align: center;
   text-transform: uppercase;
   background: var(--color-dark-blue);
@@ -178,6 +215,7 @@ body {
 }
 
 .flasks__flask-name {
+  font-family: 'DOCKER ONE';
   font-size: 48px;
   text-transform: uppercase;
 }

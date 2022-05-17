@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'DOCKER ONE';
+    src: url('DOCKERONE.woff2') format('woff2'),
+        url('DOCKERONE.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DOCKER TWO';
+    src: url('DOCKERTWO.woff2') format('woff2'),
+        url('DOCKERTWO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DOCKER THREE';
+    src: url('DOCKERTHREE.woff2') format('woff2'),
+        url('DOCKERTHREE.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

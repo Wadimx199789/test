@@ -20,16 +20,16 @@ window.onload = function () {
 
 // scroll function
 function scrollMenu(blockId) {
-    let temp,start,from,to;
-
+    let temp, start, from, to;
+    //scroll animation
     cancelAnimationFrame(temp);
-        start = performance.now();
-        from = window.pageYOffset || document.documentElement.scrollTop;
-        to = document.querySelector(blockId).getBoundingClientRect().top - 33;
-        if (blockId === "#lab") {
-            duration = 1000 * Math.abs(to) / 1000;
-        } else
-            duration = 1000 * Math.abs(to) / 4000;
+    start = performance.now();
+    from = window.pageYOffset || document.documentElement.scrollTop;
+    to = document.querySelector(blockId).getBoundingClientRect().top - 33;
+    if (blockId === "#lab") {
+        duration = 1000 * Math.abs(to) / 1000;
+    } else
+        duration = 1000 * Math.abs(to) / 4000;
 
     // scroll
     requestAnimationFrame(function step(timestamp, e) {

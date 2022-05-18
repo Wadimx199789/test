@@ -1,7 +1,13 @@
 window.onload = function () {
     const arrLinks = document.querySelectorAll('.menu__link');
     const ScrollToBottomBtn = document.querySelector('.scroll-button');
+    const advertisementLinks = document.querySelectorAll('.advertisement__word')
 
+    advertisementLinks.forEach((link)=>{
+        link.addEventListener("click",function(e){
+            e.target.classList.toggle("active");
+        })
+    })
     ScrollToBottomBtn.addEventListener('click', function () {
 
         scrollMenu(this.getAttribute('href'));

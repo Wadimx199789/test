@@ -195,6 +195,17 @@ body {
   font-size: 55px;
   line-height: 65px;
   color: var(--color-light-green);
+  -webkit-transition: .3s;
+  transition: .3s;
+  outline: none;
+}
+
+.advertisement__word.active {
+  color: var(--base-color);
+}
+
+.advertisement__word:hover {
+  color: var(--base-color);
 }
 
 .advertisement__word--bold {

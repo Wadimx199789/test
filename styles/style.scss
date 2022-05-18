@@ -178,7 +178,14 @@ body {
         font-size: 55px;
         line-height: 65px;
         color: var(--color-light-green);
-
+        transition: .3s;
+        &.active{
+            color: var(--base-color);
+        }
+        outline: none;
+            &:hover{
+                color: var(--base-color);
+            }
         &--bold {
             font-weight: 900;
         }

@@ -21,6 +21,10 @@
     color: var(--base-color);
     font-family: 'DOCKER TWO';
     background:var(--color-light-blue);
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 .container {
     max-width: 2230px;
@@ -64,9 +68,25 @@ body {
         color: #002e43;
         font-weight: 400;
         text-transform: uppercase;
+        position: relative;
         &--center{
-            margin-left: 16px;
-            margin-right: 20px;
+            margin-left: 20px;
+            margin-right: 25px;
+        }
+        &:after {
+            display: block;
+            position: absolute;
+            left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+            width: 0;/*задаём длинну линии до наведения курсора*/
+            height: 4px; /*задаём ширину линии*/
+            background-color: #002e43; /*задаём цвет линии*/
+            content: "";
+            transition: width 0.3s ease-out; /*задаём время анимации*/
+        }
+        
+        &:hover:after,
+        &:focus:after {
+            width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
         }
     }
 }
@@ -196,7 +216,6 @@ body {
     background: url('../assets/bottombcg.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
 
     &-form {
         display: flex;
@@ -204,6 +223,8 @@ body {
         align-items: center;
         row-gap: 80px;
         &__message{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
             resize:none;
             border: 6px solid #002e43;
             border-radius: 100px;
@@ -213,13 +234,17 @@ body {
             padding-left: 70px;
             background-color: #eaeaf6;
             width: 850px;
+            box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
             &::placeholder{
                 font-size: 48px;
                 color: #002e43;
-                font-weight: 300;
+                font-weight: 250;
+               
             }
         }
         input {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
             border: 6px solid #002e43;
             border-radius: 100px;
             max-width: 850px;
@@ -228,11 +253,12 @@ body {
             padding-left: 70px;
             background-color: #eaeaf6;
             width: 850px;
-
+            font-size: 48px;
+            box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
             &::placeholder {
                 font-size: 48px;
                 color: #002e43;
-                font-weight: 300;
+                font-weight: 250;
             }
         }
     }

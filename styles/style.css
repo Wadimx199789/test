@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *,
 *::after,
@@ -28,6 +29,13 @@
   color: var(--base-color);
   font-family: 'DOCKER TWO';
   background: var(--color-light-blue);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.scroll-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .container {
@@ -81,11 +89,34 @@ body {
   color: #002e43;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
 }
 
 .menu__link--center {
-  margin-left: 16px;
-  margin-right: 20px;
+  margin-left: 20px;
+  margin-right: 25px;
+}
+
+.menu__link:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  width: 0;
+  /*задаём длинну линии до наведения курсора*/
+  height: 4px;
+  /*задаём ширину линии*/
+  background-color: #002e43;
+  /*задаём цвет линии*/
+  content: "";
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  /*задаём время анимации*/
+}
+
+.menu__link:hover:after, .menu__link:focus:after {
+  width: 100%;
+  /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }
 
 .wrapper {
@@ -226,7 +257,6 @@ body {
   background: url("../assets/bottombcg.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 
 .contacts-form {
@@ -244,6 +274,8 @@ body {
 }
 
 .contacts-form__message {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   resize: none;
   border: 6px solid #002e43;
   border-radius: 100px;
@@ -253,33 +285,37 @@ body {
   padding-left: 70px;
   background-color: #eaeaf6;
   width: 850px;
+  -webkit-box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
 }
 
 .contacts-form__message::-webkit-input-placeholder {
   font-size: 48px;
   color: #002e43;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 .contacts-form__message:-ms-input-placeholder {
   font-size: 48px;
   color: #002e43;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 .contacts-form__message::-ms-input-placeholder {
   font-size: 48px;
   color: #002e43;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 .contacts-form__message::placeholder {
   font-size: 48px;
   color: #002e43;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 .contacts-form input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   border: 6px solid #002e43;
   border-radius: 100px;
   max-width: 850px;
@@ -288,30 +324,33 @@ body {
   padding-left: 70px;
   background-color: #eaeaf6;
   width: 850px;
+  font-size: 48px;
+  -webkit-box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
 }
 
 .contacts-form input::-webkit-input-placeholder {
   font-size: 48px;
   color: #002e43;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 .contacts-form input:-ms-input-placeholder {
   font-size: 48px;
   color: #002e43;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 .contacts-form input::-ms-input-placeholder {
   font-size: 48px;
   color: #002e43;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 .contacts-form input::placeholder {
   font-size: 48px;
   color: #002e43;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 .footer {
